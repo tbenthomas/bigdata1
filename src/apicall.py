@@ -5,6 +5,7 @@ def api_call(inputs: dict):
     client=Socrata(
         "data.cityofnewyork.us",
         inputs['APP_KEY'])
+                
     try:
         with open(inputs['output'], 'w') as fout:
             for i in range(inputs['num_pages']):
