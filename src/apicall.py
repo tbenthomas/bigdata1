@@ -32,14 +32,16 @@ def api_call(inputs: dict):
         except KeyError as err:
             print(err)
             print("\n check arguments please")  
-            sys.exit(1)  
-    else:
+            sys.exit(1)
+      
+    elif "page_size" in inputs.keys():
         data = client.get("nc67-uf89")
         print(client.get("nc67-uf89"))
         print(f"\n\nNumber of pages = {int(len(data)/inputs['page_size'])}")
         print(f"Number of rows = {len(data)}")
         print("No output file specified, outputting to terminal")
-    
+    else:
+        print("Invalid arguments, must 'page_size' is required")
     
 
     
