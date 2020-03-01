@@ -126,11 +126,5 @@ to the terminal.
 
 ### Other Usage
 > $ docker run -t -e APP_KEY={YOUR API KEY} bigdata1:1.0 python main.py --page_size=1000 --num_pages=4 --output=results.json
-This is not recommended because it only runs an instance of your docker image and exits after;which is not ideal for working with output files.
 
-The reason being, the outputed file is created in the environemnt of that specific instance of the docker image. 
-Since you are not in interactive mode, you will not be able to immediately interact with that file.  bigdata1:1.0 python main.py --page_size=1000 --num_pages=4 --output=results.json
-This is not recommended because it only runs an instance of your docker image and exits after;which is not ideal for working with output files.
-
-The reason being, the outputed file is created in the environemnt of that specific instance of the docker image. 
-Since you are not in interactive mode, you will not be able to immediately interact with that file. 
+This is not recommended because it only runs an instance of your docker image and exits after;which is not ideal for working with output files.The reason being, the outputed file is created in the environemnt of that specific instance of the docker image. Since you are not in interactive mode, you will not be able to immediately interact with that file. 
