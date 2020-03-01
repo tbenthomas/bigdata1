@@ -15,7 +15,7 @@ a specific id that is hard encoded into the apicall.py script (under src).
 This is required because they specify the amount of data the script will pull from the dataset.
 The dataset gets split into pages, so page size is required.
 
-### Optional Parameter:
+### Optional Parameters:
 1. --output=
 2. --num_pages=
 
@@ -56,7 +56,7 @@ This should be run in a directory that contains this repository. The -v $PWD:/ap
 
 2. 
 Run your docker container to start an instance in interactive mode.
-Then run the python3 script as specified above under header "Local Machine"
+Then run the python3 script as specified above under header "Local Machine" above.
 
 3.
 > $ docker run -t -e APP_KEY={Your API KEY} bigdata1:1.0 python main.py --page_size=1000 --num_pages=4 
