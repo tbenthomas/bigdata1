@@ -34,7 +34,10 @@ main.py script is run on has a variable APP_KEY set to a proper APP_TOKEN.
 1. 
 > $ python3 main.py --page_size=1000 --num_pages=4 
 2. optional*
->$ python3 main.py --page_size=1000 --num_pages=4 --output ={Your output file name}
+>$ python3 main.py --page_size=1000 --num_pages=4 --output={Your output file name}
+3. optional**
+>$ python3 main.py --page_size=1000 
+
 It is required to run using python3 because function annotations are used. 
 
 ## Docker 
