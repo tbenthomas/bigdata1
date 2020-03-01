@@ -38,8 +38,6 @@ main.py script is run on has a variable APP_KEY set to a proper APP_TOKEN.
 3. optional**
 >$ python3 main.py --page_size=1000 
 
-It is required to run using python3 because function annotations are used. 
-
 ## Docker 
 A docker container is available at [Docker Container](https://hub.docker.com/r/tbenthomas/bigdata1)
 
