@@ -41,7 +41,7 @@ def api_call(inputs: dict):
         print(f"Number of rows = {len(data)}")
         print("No output file specified, outputting to terminal")
     else:
-        print("Invalid arguments, must 'page_size' is required")
+        print("Invalid arguments,'page_size' is required")
     
 
     
