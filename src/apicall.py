@@ -27,6 +27,8 @@ def api_call(inputs: dict):
             for i in range(inputs['num_pages']):
                 print(f"\n\n PAGE NUMBER {i+1}\n\n")
                 print(client.get("nc67-uf89",limit=inputs['page_size'],offset=inputs['page_size']*i))
+            print("No output file specified, outputting to terminal")
+
         except KeyError as err:
             print(err)
             print("\n check arguments please")  
@@ -36,7 +38,7 @@ def api_call(inputs: dict):
         print(client.get("nc67-uf89"))
         print(f"\n\nNumber of pages = {int(len(data)/inputs['page_size'])}")
         print(f"Number of rows = {len(data)}")
-    print("No output file specified, outputting to terminal")
+        print("No output file specified, outputting to terminal")
     
     
 
