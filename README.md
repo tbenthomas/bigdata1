@@ -21,7 +21,7 @@ The dataset gets split into pages, so page size is required.
 
 If a proper output file is specified using this parameter, all data that is pulled by the script will be stored
 in a output file under the name inputed for this parameter. 
-If num_pages is not specified pages will be calcualted based on specified page_size.
+If num_pages is not specified,pages will be calcualted based on specified page_size.
 
 ### Required Environment Variable
 1. APP_KEY
