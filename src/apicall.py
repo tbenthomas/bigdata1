@@ -39,9 +39,9 @@ def api_call(inputs: dict):
         while True:
             call=client.get("nc67-uf89",limit=10000)
             data.extend(call)
-            print(len(data))
             if(len(call)<10000):
                 break;
+        
         print(data)
         
         print(f"\n\nNumber of pages = {int(len(data)/inputs['page_size'])}")
