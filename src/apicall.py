@@ -35,8 +35,15 @@ def api_call(inputs: dict):
             sys.exit(1)
       
     elif "page_size" in inputs.keys():
-        data = client.get("nc67-uf89")
-        print(client.get("nc67-uf89"))
+        data=[]
+        while True:
+            call=client.get("nc67-uf89",limit=10000)
+            data.extend(call)
+            print(len(data))
+            if(len(call)<10000):
+                break;
+        print(data)
+        
         print(f"\n\nNumber of pages = {int(len(data)/inputs['page_size'])}")
         print(f"Number of rows = {len(data)}")
         print("No output file specified, outputting to terminal")
