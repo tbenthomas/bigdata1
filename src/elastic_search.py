@@ -1,9 +1,10 @@
 from elasticsearch import Elasticsearch
-
+from datetime import datetime
 def prep_data(data: list) -> dict:
     result=[]
     for record in data:
         temp =dict(record)
+        temp['issue_date']=datetime(temp['issue_date'])
         entry = {'index': temp['plate'],
                   'doc_type':'ticket',
                   'body': temp
