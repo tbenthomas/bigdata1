@@ -16,6 +16,6 @@ def push_data(es: Elasticsearch,data: list):
     records=prep_data(data)
 
     for record in records:    
-        res = es.index(index=record['index'],doc_type=record['doc_type'],body=record['body'])
+        res = es.index(index="opcv",doc_type=record['doc_type'],body=record['body'])
         print(res['result'])
     
