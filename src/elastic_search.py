@@ -4,7 +4,10 @@ def prep_data(data: list) -> dict:
     result=[]
     for record in data:
         temp =dict(record)
-        temp['issue_date']=datetime(temp['issue_date'])
+
+        date=list(map(int,temp["issue_date"].split('/')))
+        temp["issue_date"]=datetime(month=date[0],day=date[1],year=date[2])
+        
         entry = {'index': temp['plate'],
                   'doc_type':'ticket',
                   'body': temp
