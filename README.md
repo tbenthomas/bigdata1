@@ -2,6 +2,7 @@
 
 # About
 This project seeks to create a terminal/shell interface aimed at pulling data from a dataset found in NYC Open Data.
+Optionally, by utlizing docker-compose, a elasticsearch and kibana service will be started, allowing the creation of visuals and dashboards on Kibana.
 
 The specific dataset that this project aims to work with is Open Parking and Camera Violations (OPCV) which we connect to using
 a specific id that is hard encoded into the apicall.py script (under src).
@@ -66,3 +67,19 @@ to the terminal.
 > $ docker run -t -e APP_KEY={YOUR API KEY} bigdata1:1.0 python main.py --page_size=1000 --num_pages=4 --output=results.json
 
 This is not recommended because it only runs an instance of your docker image and exits after;which is not ideal for working with output files.The reason being, the outputed file is created in the environemnt of that specific instance of the docker image. Since you are not in interactive mode, you will not be able to immediately interact with that file. 
+
+# ElasticSearch and Kibana
+## Optionally you can utilize the included docker-compose.yml file to use this terminal application
+### Simply run this command
+> $ docker-compose up -d
+
+This will start all the services outlined in docker-compose (python, elasticsearch, and Kibana). An elasticsearch service will be started on localhost:9200 and Kibana will be started on localhost:5201
+
+### To run our python main script, load the data into elasticsearch, and subsequently make available to kibana, simply run
+
+> docker-compose run -e APP_KEY={Your APP KEY} pyth python3 main.py --page_size={int} --num_pages={int}
+
+Optionally you may specify an output file as before. 
+
+### Using Kibana
+#### 
