@@ -1,4 +1,4 @@
-from elasticsearch import Elasticsearch
+from elasticsearch import Elasticsearch,helpers
 from datetime import datetime
 
 def prep_data(data: list) -> dict:
@@ -19,6 +19,7 @@ def push_data(es: Elasticsearch,data: list):
 
     records=prep_data(data)
     count = 1
+
     for record in records:    
         res = es.index(index="opcv",doc_type=record['doc_type'],body=record['body'])
         print(res['result']," ",count)

@@ -1,0 +1,142 @@
+curl "localhost:9200/_search?q=state="VA"&size=1&pretty=true":
+
+{
+  "took" : 6,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 6,
+    "successful" : 6,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 26,
+    "max_score" : 5.9454207,
+    "hits" : [
+      {
+        "_index" : "opcv",
+        "_type" : "ticket",
+        "_id" : "qp_Oz3AB9oj6nHQpFc3N",
+        "_score" : 5.9454207,
+        "_source" : {
+          "plate" : "VMX1962",
+          "state" : "VA",
+          "license_type" : "PAS",
+          "summons_number" : "8537513106",
+          "issue_date" : "2017-04-25T00:00:00",
+          "violation_time" : "11:19A",
+          "violation" : "NO PARKING-DAY/TIME LIMITS",
+          "fine_amount" : "60",
+          "penalty_amount" : "10",
+          "interest_amount" : "0",
+          "reduction_amount" : "0",
+          "payment_amount" : "70",
+          "amount_due" : "0",
+          "precinct" : "090",
+          "county" : "K",
+          "issuing_agency" : "TRAFFIC",
+          "summons_image" : {
+            "url" : "http://nycserv.nyc.gov/NYCServWeb/ShowImage?searchID=VDBSVmVrNTZWWGhOZWtWM1RtYzlQUT09&locationName=_____________________",
+            "description" : "View Summons"
+          }
+        }
+      }
+    ]
+  }
+}
+
+curl "localhost:9200/_search?q=county="MN"&size=1&pretty=true":
+
+{
+  "took" : 3,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 6,
+    "successful" : 6,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 35,
+    "max_score" : 6.52013,
+    "hits" : [
+      {
+        "_index" : "opcv",
+        "_type" : "ticket",
+        "_id" : "MJ_Wz3AB9oj6nHQpotqO",
+        "_score" : 6.52013,
+        "_source" : {
+          "plate" : "PAL5140",
+          "state" : "MN",
+          "license_type" : "PAS",
+          "summons_number" : "8592610229",
+          "issue_date" : "2017-10-05T00:00:00",
+          "violation_time" : "08:10A",
+          "violation" : "PLTFRM LFTS LWRD POS COMM VEH",
+          "fine_amount" : "65",
+          "penalty_amount" : "0",
+          "interest_amount" : "0",
+          "reduction_amount" : "37",
+          "payment_amount" : "28",
+          "amount_due" : "0",
+          "precinct" : "006",
+          "county" : "NY",
+          "issuing_agency" : "TRAFFIC",
+          "violation_status" : "HEARING HELD-GUILTY REDUCTION",
+          "summons_image" : {
+            "url" : "http://nycserv.nyc.gov/NYCServWeb/ShowImage?searchID=VDBSVk5VMXFXWGhOUkVsNVQxRTlQUT09&locationName=_____________________",
+            "description" : "View Summons"
+          }
+        }
+      }
+    ]
+  }
+}
+
+curl "localhost:9200/_search?q=license_type="OMT"&size=1&pretty=true":
+
+{
+  "took" : 8,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 6,
+    "successful" : 6,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 195,
+    "max_score" : 3.3302457,
+    "hits" : [
+      {
+        "_index" : "opcv",
+        "_type" : "ticket",
+        "_id" : "yZ_Mz3AB9oj6nHQp9ctb",
+        "_score" : 3.3302457,
+        "_source" : {
+          "plate" : "T739733C",
+          "state" : "NY",
+          "license_type" : "OMT",
+          "summons_number" : "4669342344",
+          "issue_date" : "2019-10-15T00:00:00",
+          "violation_time" : "09:24P",
+          "violation" : "PHTO SCHOOL ZN SPEED VIOLATION",
+          "fine_amount" : "50",
+          "penalty_amount" : "0",
+          "interest_amount" : "0",
+          "reduction_amount" : "0",
+          "payment_amount" : "50",
+          "amount_due" : "0",
+          "precinct" : "000",
+          "county" : "BX",
+          "issuing_agency" : "DEPARTMENT OF TRANSPORTATION",
+          "summons_image" : {
+            "url" : "http://nycserv.nyc.gov/NYCServWeb/ShowImage?searchID=VGtSWk1rOVVUVEJOYWswd1RrRTlQUT09&locationName=_____________________",
+            "description" : "View Summons"
+          }
+        }
+      }
+    ]
+  }
+}
+
