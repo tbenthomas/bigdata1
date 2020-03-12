@@ -95,3 +95,7 @@ Optionally you may specify an output file as before.
 ##### Pie chart showing Percentage of each violation amongst the sample of the date (5000 records)
 
 ![image](kibana_screenshots/pie_chart_violations.png?raw=true)
+
+##### Heat Map colored by Average Fine amount for each issuing agency split up by license type. 
+
+![image](kibana_screenshots/heatmap.png?raw=true)
