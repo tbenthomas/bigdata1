@@ -91,3 +91,7 @@ Optionally you may specify an output file as before.
 ##### Graph showing violation counts over time. Due to limits on number of buckets, the buckets were defaulted to represent months.
 
 ![image](kibana_screenshots/ticket_count_over_time.png?raw=true)
+
+##### Pie chart showing Percentage of each violation amongst the sample of the date (5000 records)
+
+![image](kibana_screenshots/pie_chart_violations.png?raw=true)
