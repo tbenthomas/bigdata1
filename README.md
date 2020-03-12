@@ -85,4 +85,5 @@ Optionally you may specify an output file as before.
 #### After running the python script and loading the elastic search index, Kibana is able to interact with the loaded data.
 #### Kibana will be running at port 5601 (localhost:5601). 
 #### Example visuals made using Kibana:
-![Alt text](/kibana_screenshots/map_visual.jpg?raw=true "Count of violations by State")
+
+![image](kibana_screenshots/map_visual?raw=true "Count of violations by State")
