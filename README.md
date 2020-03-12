@@ -82,4 +82,8 @@ This will start all the services outlined in docker-compose (python, elasticsear
 Optionally you may specify an output file as before. 
 
 ### Using Kibana
-#### 
+#### After running the python script and loading the elastic search index, Kibana is able to interact with the loaded data.
+#### Kibana will be running at port 5601 (localhost:5601). 
+#### Example visuals made using Kibana:
+
+![image](kibana_screenshots/map_visual?raw=true "Count of violations by State")
