@@ -85,5 +85,9 @@ Optionally you may specify an output file as before.
 #### After running the python script and loading the elastic search index, Kibana is able to interact with the loaded data.
 #### Kibana will be running at port 5601 (localhost:5601). 
 #### Example visuals made using Kibana:
+##### Region map showing count of violations by state
+![image](kibana_screenshots/map_visual?raw=true)
 
-![image](kibana_screenshots/map_visual?raw=true "Count of violations by State")
+##### Graph showing violation counts over time. Due to limits on number of buckets, the buckets were defaulted to represent months.
+
+![image](kibana_screenshots/ticket_count_over_time.png?raw=true)
