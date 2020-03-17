@@ -84,17 +84,23 @@ Optionally you may specify an output file as before.
 ### Using Kibana
 #### After running the python script and loading the elastic search index, Kibana is able to interact with the loaded data.
 #### Kibana will be running at port 5601 (localhost:5601). 
-#### Example visuals made using Kibana:
+#### Using a sample of 10,000 violation records the following visuals were created:
 ##### Region map showing count of violations by state
-![image](kibana_screenshots/map_visual?raw=true)
+![image](kibana_screenshots/map.png?raw=true)
 
-##### Graph showing violation counts over time. Due to limits on number of buckets, the buckets were defaulted to represent months.
+Based on this map, as expected the majority of violations in our sample had license plates from New York State. There were violations from license plates in neighboring states as well and even some from the State of Florida. In a larger sample, it is expected that there will be records have license plates issued by other states as well.  
+##### Stacked area chart showing violation counts by county, stacked by violation type. 
 
-![image](kibana_screenshots/ticket_count_over_time.png?raw=true)
+![image](kibana_screenshots/stacked_area?raw=true)
 
-##### Pie chart showing Percentage of each violation amongst the sample of the date (5000 records)
+Based on this chart it can be see that the majority of violations in this sample were in the NYC county, with the majority of violations in each county with the exception of brooklyn being street cleaning. This is understandble because NYC has something called "Alternate Side Street Parking Rules" set up for street cleaning. Due to limiting parking and inconvenient timing of rules, many New Yorkers fall prey to violation across all five boroughs. 
 
-![image](kibana_screenshots/pie_chart_violations.png?raw=true)
+In Brooklyn the highest number of violations in this sample were school zone violations. 
+##### Pie chart showing Percentage of each violation amongst the sample of the date (10,000 records)
+
+![image](kibana_screenshots/pie.png?raw=true)
+
+This pie chart offers further evidence that the majority of violations are of type "NO PARKING-STREET CLEANING". Looking at the rest of the chart, it can be inferred that the majority of violations seem to be from parking violations. 
 
 ##### Heat Map colored by Average Fine amount for each issuing agency split up by license type. 
 
