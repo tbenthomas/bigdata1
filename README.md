@@ -1,4 +1,5 @@
-# bigdata1 
+# STA9760
+# bigdata1
 
 # About
 This project seeks to create a terminal/shell interface aimed at pulling data from a dataset found in NYC Open Data.
