@@ -58,7 +58,7 @@ to the terminal.
 
 This is not recommended because it only runs an instance of your docker image and exits after;which is not ideal for working with output files.The reason being, the outputed file is created in the environemnt of that specific instance of the docker image. Since you are not in interactive mode, you will not be able to immediately interact with that file. 
 
-# Part 2: ElasticSearch and Kibana
+# Part 2/3: ElasticSearch and Kibana
 > All necessary files are included in this repository. This includes the necessary docker-compose.yml file as well as associated python scripts. 
 ### To use docker-compose run
 > $ docker-compose up -d
