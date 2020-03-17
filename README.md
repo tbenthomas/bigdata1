@@ -92,6 +92,10 @@ In Brooklyn the highest number of violations in this sample were school zone vio
 
 This pie chart offers further evidence that the majority of violations are of type "NO PARKING-STREET CLEANING". Looking at the rest of the chart, it can be inferred that the majority of violations seem to be from parking violations. 
 
-##### Heat Map colored by Average Fine amount for each issuing agency split up by license type. 
+##### Heat Map colored by Average Fine amount for each violation split up by issuing agency . 
 
 ![image](kibana_screenshots/heatmap.png?raw=true)
+
+Looking at this heatmap, it can be seen that the "NO PARKING-STREET CLEANING" violation that was noted in previous charts as the most frequent violation is actually on of the lesser violations in terms of average fine amount. It can be seen that the violation is primarily issued by the Department of Transportation. Despite its low average fine amount it still stands as the most frequent, by which we can be inferred that that violation is what generates the most revenue out of all the violations.
+
+This heatmap also indicates that illegal parking on handicap only spots will carry the highest average fine. 
