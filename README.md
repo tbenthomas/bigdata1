@@ -4,16 +4,22 @@
 This project seeks to create a terminal/shell interface aimed at pulling data from a dataset found in NYC Open Data.
 Optionally, by utlizing docker-compose, a elasticsearch and kibana service will be started, allowing the creation of visuals and dashboards on Kibana.
 
-The specific dataset that this project aims to work with is Open Parking and Camera Violations (OPCV) which we connect to using
-a specific id that is hard encoded into the apicall.py script (under src).
+The specific dataset that this project aims to work with is Open Parking and Camera Violations (OPCV) which we pull data from utilizing the socrata api.
 
-# Usage
---------------------------------------------------------------------------------------------------------------------------
-## Arguments
-### The main terminal arguments that must be accompanied for this script are:
+# Part 1
+This section will contain instructions on usage utilizing a docker container to run a command line interface to simply pull data from our data source. 
+
+## Docker 
+> A Docker container for a command line interface to simply pull data and either output to terminal or load into specified file is available at [Docker Container](https://hub.docker.com/r/tbenthomas/bigdata1) under tag 1.0. 
+
+This docker container contains an image of an enviroment which will allow you to run the scripts without downloading extra
+dependencies (e.g. sodapy package) and contains all required scripts (found in this repository).
+
+## Command Line Arguments
+### The main terminal argument that must be accompanied for this script are:
 1. --page_size=
 
-This is required because they specify the amount of data the script will pull from the dataset.
+This is required because it specifies the amount of data the script will pull from the dataset.
 The dataset gets split into pages, so page size is required.
 
 ### Optional Parameters:
@@ -28,23 +34,7 @@ If num_pages is not specified,pages will be calcualted based on specified page_s
 1. APP_KEY
 
 Socrata API makes use of APP tokens in order to make api calls. As such, it is required that the environment that the 
-main.py script is run on has a variable APP_KEY set to a proper APP_TOKEN. 
-
-## How to run
-### Local Machine
-1. 
-> $ python3 main.py --page_size=1000 --num_pages=4 
-2. optional*
->$ python3 main.py --page_size=1000 --num_pages=4 --output={Your output file name}
-3. optional**
->$ python3 main.py --page_size=1000 
-
-## Docker 
-A docker container is available at [Docker Container](https://hub.docker.com/r/tbenthomas/bigdata1)
-
-This docker container contains an image of an enviroment which will allow you to run the scripts without downloading extra
-dependencies (e.g. sodapy package) and contains all required scripts (found in this repository).
-
+main.py script is run on has a variable APP_KEY set to a proper APP_TOKEN.
 You have a few options to run this from the docker container:
 
 ### Recommended Usage
@@ -68,9 +58,9 @@ to the terminal.
 
 This is not recommended because it only runs an instance of your docker image and exits after;which is not ideal for working with output files.The reason being, the outputed file is created in the environemnt of that specific instance of the docker image. Since you are not in interactive mode, you will not be able to immediately interact with that file. 
 
-# ElasticSearch and Kibana
-## Optionally you can utilize the included docker-compose.yml file to use this terminal application
-### Simply run this command
+# Part 2: ElasticSearch and Kibana
+> All necessary files are included in this repository. This includes the necessary docker-compose.yml file as well as associated python scripts. 
+### To use docker-compose run
 > $ docker-compose up -d
 
 This will start all the services outlined in docker-compose (python, elasticsearch, and Kibana). An elasticsearch service will be started on localhost:9200 and Kibana will be started on localhost:5201
@@ -81,7 +71,7 @@ This will start all the services outlined in docker-compose (python, elasticsear
 
 Optionally you may specify an output file as before. 
 
-### Using Kibana
+### Kibana
 #### After running the python script and loading the elastic search index, Kibana is able to interact with the loaded data.
 #### Kibana will be running at port 5601 (localhost:5601). 
 #### Using a sample of 10,000 violation records the following visuals were created:
